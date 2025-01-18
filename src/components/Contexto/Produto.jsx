@@ -2,11 +2,11 @@ import { useContext} from "react";
 import { UseContext } from "./StorageContexto";
 
 export const Produto = () => {
-  const dados = useContext(UseContext);
+  const {dados} = useContext(UseContext);
 
   console.log(dados);
 
-  if(dados.dados === null) {
+  if(dados === null) {
     return null
   }
 
@@ -15,14 +15,14 @@ export const Produto = () => {
       
         <section >
             <h1>Produtos</h1>
-            {dados.dados.map((produto) => (
+            {dados.map((produto) => (
                 <li key={produto.id}>{produto.nome}</li>
                 
             ))}
 
         </section >
             <div  style={{width: '300px', height: '100px'}}>
-                {dados.dados.map((produto) => (
+                {dados.map((produto) => (
                     // <li key={produto.id}>{produto.fotos.src}</li>
                     <img style={{width: '300px', height: '300px', objectFit: 'cover'}} key={produto.id} src={produto.fotos[0].src} alt={produto.fotos.titulo} />
                   
