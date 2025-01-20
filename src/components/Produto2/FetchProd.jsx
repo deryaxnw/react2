@@ -37,3 +37,6 @@ export const FetchProd = () => {
     </>
   );
 };
+
+
+//este codigo define algo como favorito ou definitivo dentro do LocalStorage

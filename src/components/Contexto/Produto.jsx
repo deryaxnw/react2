@@ -4,7 +4,7 @@ import { UseContext } from "./StorageContexto";
 export const Produto = () => {
   const {dados} = useContext(UseContext);
 
-  console.log(dados);
+  // console.log(dados);
 
   if(dados === null) {
     return null
